@@ -1,0 +1,32 @@
+.panel.panel-default
+  .panel-heading
+    .row
+      .col-md-6
+        h4 Upload File and query your object data
+      .col-md-6
+        = link_to '', new_object_state_path, remote: true, class: 'fa fa-cloud-upload fa-3x pull-right'
+
+  = simple_form_for @search_result, as: :search_data, url: object_states_path, method: :get do |f|
+    .panel.body.search-form
+      .row
+        .col-md-3
+          = f.input :object_type, collection: ObjectState.object_product_options, label: "What's the state of", include_blank: false
+
+        .col-md-3
+          = f.input :object_id, collection: ObjectState.object_id_options, label: "With ID", include_blank: false
+
+        .col-md-3
+          = f.input :timestamp,  label: 'At timestamp' ,input_html: { required: true }
+
+        .col-md-2
+          = f.submit 'Search', class: 'btn btn-primary pull-right search-button'
+
+  .panel-body
+    - if params[:search_data].present?
+      table.table.table-bordered
+        thead
+          tr
+            th Query Result
+        tbody
+          tr
+            td = @search_result.object_changes

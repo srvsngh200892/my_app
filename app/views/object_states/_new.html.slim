@@ -1,0 +1,10 @@
+.modal-header
+  h4 Import Object State CSV
+
+= simple_form_for :file_upload, url: object_states_path, method: :post do |f|
+  .modal-body
+    = f.input :csv, as: :file, label: 'Import', input_html: { accept: '.csv' , class: 'js_file_upload_csv'}
+
+  .modal-footer
+    = link_to 'Cancel', '#', class: 'btn btn-default pull-left', data: { dismiss: 'modal' }
+    = f.submit 'Import', class: 'btn btn-primary'

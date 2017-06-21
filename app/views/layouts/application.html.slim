@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+
+    title Upload Object State Reconstruction CSV
+
+    = stylesheet_link_tag :application, 'data-turbolinks-track': true
+    = csrf_meta_tags
+
+    body
+
+      .container
+
+        #flash_message
+          = render partial: 'shared/common_flash_message'
+
+        = yield
+
+        = render partial: 'shared/modal'
+
+    = javascript_include_tag :application, 'data-turbolinks-track': true
