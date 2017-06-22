@@ -8,6 +8,7 @@ RSpec.describe ObjectStatesController, type: :controller do
         file = fixture_file_upload('test_file.csv', 'text/csv')
         post :create, file_upload: { csv: file }
       end
+      it { expect(ObjectState.count).to eq(7) }
       it { is_expected.to redirect_to(object_states_path) }
     end
   end
