@@ -1,28 +1,47 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== INSTRUCTION
 
-Things you may want to cover:
+Things you need to know for this application :
 
-* Ruby version
+* ruby version 2.2.5
+  rvm use ruby-2.2.5
 
-* System dependencies
+* rails version 4.2.4
 
-* Configuration
+* install postgress
 
-* Database creation
+* Install sidekiq
 
-* Database initialization
+* Install Redis
 
-* How to run the test suite
+* Change database.yml
 
-* Services (job queues, cache servers, search engines, etc.)
+* bundle install (to install required gem)
 
-* Deployment instructions
+* rails s ( to start server)
+* run specs use command
+  rspec spec
+  * run controllers specs use command
+    rspec spec/controllers
+     
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ * File we have 
+    - controller
+        - object_state_controller.rb (we dont have any business logic in controller all the logic is moved to service layer)
+              
+     - services
+         - create_object_state_servie.rb
+             this contain all the business logic for consumpution of CSV
+         - search_result_servie.rb
+             this contain all the business logic for searching of user query 
+ 
+ * Deployment Step
+   - Create Heroku Login account
+   - Install Heroku CLI
+   - Create Procfile
+   - Configure Redis GO addon
+   - Configure Sikekiq
+   - git push heroku master
+   - check up and running using heroku ps
+   - to open web app heroku open
