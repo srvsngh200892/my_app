@@ -27,7 +27,6 @@ body {
    margin:5px 3px;
 }
 .panel-default>.panel-heading,.panel-default>.panel-body{
-background-color: #FFF !important;
 border-bottom: thin solid #DDDDDD;
 box-shadow: 0 1px 1px rgba(0,0,0,.05)
 }
@@ -46,5 +45,13 @@ box-shadow: 0 1px 1px rgba(0,0,0,.05)
 }
 
 .panel-footer {
-  background-color: #FFF !important;
+  background-color: #ab8fc1 !important;
+}
+
+.panel-heading {
+  background-color: #ab8fc1 !important;
+}
+
+.panel-body {
+  background-color: #dad2e0 !important;
 }

@@ -1,4 +1,4 @@
-class CsvImportWorker
+class CsvWorker
   include Sidekiq::Worker
   include ActiveModel::Model
 

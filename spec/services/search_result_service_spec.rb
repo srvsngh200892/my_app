@@ -26,6 +26,18 @@ RSpec.describe SearchResultService, type: :service do
 
       it { expect(obejct_state.object_changes).to eq({}) }
     end
+
+    context 'pass valild timestamp and get object changes hash result' do
+      let(:params) do
+        {
+          object_id: 1,
+          object_type: 'Order',
+          timestamp: 1484731481
+        }
+      end
+
+      it { expect(obejct_state.object_changes).to eq({"status"=>"paid", "customer_name"=>"Jack", "customer_address"=>"Trade St.", "ship_date"=>"2017-01-18", "shipping_provider"=>"DHL"}) }
+    end
   end
 
 end
