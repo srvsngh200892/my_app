@@ -13,7 +13,7 @@ Things you need to know for this application :
 
 * Install sidekiq
 
-* Install Redis
+* Install Redis - configure redis url in prod and as well in dev in sidekiq.rb
 
 * Change database.yml
 
