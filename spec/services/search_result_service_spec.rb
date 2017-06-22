@@ -20,7 +20,7 @@ RSpec.describe SearchResultService, type: :service do
         {
           object_id: 1,
           object_type: 'Order',
-          timestamp: 1484722542
+          timestamp: 1484731
         }
       end
 
