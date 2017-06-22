@@ -14,7 +14,7 @@ class SearchResultService
   end
 
   # Merges all object_changes at a particular timestamp
-  def object_changes
+  def merge_object_changes
     object_changes = search_result.map { |obj| obj.object_changes }
     object_changes.reduce(&:merge) || {}
   end
