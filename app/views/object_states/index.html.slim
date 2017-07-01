@@ -16,7 +16,7 @@
           = f.input :object_id, collection: ObjectState.object_id_options, label: "With ID", include_blank: false
 
         .col-md-3
-          = f.input :timestamp,  label: 'At timestamp' ,input_html: { required: true }
+          = f.input :timestamp , label: 'At timestamp' ,input_html: { required: true , type: 'number', min:'0', max:'9223372036854775807'}
 
         .col-md-2
           = f.submit 'Query', class: 'btn btn-primary pull-right search-button'
