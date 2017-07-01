@@ -14,7 +14,7 @@ RSpec.describe SearchResultService, type: :service do
 
   subject(:obejct_state) { SearchResultService.new(params) }
 
-  describe '#search' do
+  describe '#search_result' do
     context 'pass invalild timestamp and get empty hash result' do
       let(:params) do
         {
