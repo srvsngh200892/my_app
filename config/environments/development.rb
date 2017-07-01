@@ -36,7 +36,7 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
-  ENV["REDISTOGO_URL"] = 'redis://redistogo:103542cd2aa963490b3458cef64a66d9@koi.redistogo.com:11992/'
+
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
