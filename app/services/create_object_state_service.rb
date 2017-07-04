@@ -11,7 +11,6 @@ class CreateObjectStateService
     return unless valid?
     options = {:chunk_size => 100}
     SmarterCSV.process(csv.path, options) do |chunk|
-      binding.pry
       CsvWorker.perform_async(chunk)
     end
   end
